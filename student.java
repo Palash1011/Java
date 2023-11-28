@@ -1,44 +1,38 @@
-import java.util.Scanner;
 class student
 {
 int reg,m1,m2,m3,m4,m5,t;
 String n;
 double avg=0.00f;
-student()
+student(int a1,String a2)
 {
-Scanner p=new Scanner(System.in);
-System.out.println("Enter the name");
-n=p.nextLine();
-Scanner q=new Scanner(System.in);
-System.out.println("Enter the Reg no");
-reg=q.nextInt();
+n=a2;
+reg=a1;
 }
-student(int x,int y)
+student(int x,int y,int z,int m,int n)
 {
-Scanner r=new Scanner(System.in);
-System.out.println("Enter the Subject marks");
-m3=r.nextInt();
-m4=r.nextInt();
-m5=r.nextInt();
 m1=x;
 m2=y;
+m3=z;
+m4=m;
+m5=n;
 }
 void calculations()
 {
 t=m1+m2+m3+m4+m5;
 avg=t/5;
+System.out.println("Total Marks : "+t);
+System.out.println("Average Marks : "+avg);
 }
 void display()
 {
 System.out.println("Student Name : "+n);
 System.out.println("Reg No : "+reg);
-System.out.println("Total Marks : "+t);
-System.out.println("Average Marks : "+avg);
 }
 public static void main(String args[])
 {
-student z=new student();
-z.calculations(67,78);
-z.display();
+student z1=new student(4048,"Palash");
+z1.display();
+student z2=new student(78,68,97,70,88);
+z2.calculations();
 }
 }
